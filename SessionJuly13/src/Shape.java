@@ -1,7 +1,7 @@
 public class Shape {
 
-    double height;
-    double width;
+    private double height;
+    private double width;
 
     public Shape(double height, double width) {
         this.height = height;
@@ -9,7 +9,11 @@ public class Shape {
     }
 
     public void setHeight(double height) {
-        this.height = height;
+        if(height<0) {
+            System.out.println("Not ALlowed");
+        }else {
+            this.height = height;
+        }
     }
 
 
