@@ -57,7 +57,7 @@ public class Test {
         System.out.println(st3);
 
         st2 = "  ";
-        if(st2.trim().isEmpty()) {  
+        if(st2.trim().isEmpty()) {
             System.out.println("EMPTY");
         }
 
