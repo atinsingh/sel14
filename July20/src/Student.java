@@ -44,7 +44,10 @@ public class Student {
         Employee emp  = new Employee("Atin",20,20);
         emp.printDetails();
 
+        emp.likeMe();
 
+        emp.printDetails();
+        emp.likeMe(120);
 
 
     }
