@@ -3,45 +3,100 @@ import java.util.Locale;
 public class StringPractice2 {
 
     public static void main(String[] args) {
-        String str = "Atin"; // Direct
-        str  = " AYZ";
-        String str2  = new String("Atin"); // Constructor
-        byte [] bytes = {100,101,100,102};
-        String str3  = new String(bytes); // from Binary Data
-        char [] chars = {'a','t','i','n'};
-        String str4 = new String(chars); // Direct from chars
+        // switch case
+        // User is gonna give u country code and you need print country name
+        String countryCode = "UK";
+        int num1,num2;
 
-        float size = 2;
-        String st5 = String.valueOf(size);
-        int account = 1234;
-        String name = "Vivek Kumar Funny Man";
-        double balance = 20.123449483;
+        switch (countryCode) {
+            case "US"  : {
+                System.out.println("United States");
+                System.out.println(23);
+                System.out.println(21);
+            }
+            break;
+            case "IN"  : {
+                System.out.println("India");
+            }break;
+            case "NZ"  : {
+                System.out.println("NZ");
+            }break;
+            case "AU"  : {
+                System.out.println("AU");
+            }break;
+            case "UK"  : {
+                System.out.println("UK");
+                break;
+            }
+            case "XX"  : {
+                System.out.println("XX");
+            }break;
+            default:{
+                System.out.println("Not a Valid country code");
+            }
 
-        // %s == string
-        // %d == integers
-        // %f == floating
-        // %c  = chars
+        }
 
-        String st8 =  String.format(Locale.FRANCE,"Dear %10s, Your account %010d has bill of $ %4.2f.\nPlease pay. Thank you",name,account,balance);
+        // For loop -->  classic for loop  // forEach loop
+        // i++  === i= i+1;
+//        for (int i = 0 ; i<2 ; i++) {
+//            System.out.println(i);
+//        }
 
-        System.out.println(st8);
+//        for (int i  =0 , j = 0 , k = 0 ; i<2 || j <1 && k <1 ; i++ , j++, k++){
+//            System.out.println(i + " "+ j);
+//        };
 
-        // String is immutable ..
+        for (int i = 0 ; i < 3 ; i++) {
+            for (int j = 0; j<3; j++){
+                System.out.print(i +""+ j);
+            }
 
-        StringBuffer st11 =  new StringBuffer("Java Class");
-        String st12 = st11.substring(2);
-        st11.append(" July 16");
+        }
+
+        // you need to print eve number between 0 to 50;
+        // second do the sum of all even numbers
 
 
-        System.out.println(st12);
-        System.out.println(st11);
+        int sum = 0;
+        for (int i = 0 ; i<=50 ; i= i+2) {
+            if(i%2==0){
+                System.out.println(i);
+                sum = sum +i;
+            }
+        }
+        System.out.println(sum);
 
-        StringBuilder st15  = new StringBuilder("Atin");
-        st15.insert(st15.length(), "Singh");
+        // while
+        int i =0 , j = 0, k = 0;
+        sum = 0;
+//        while ( i<=50 && j<30 || k <=0){
+//           if(i%2==0){
+//               System.out.println(i);
+//               sum = sum+i;
+//           }
+//           i++;
+//           j++;
+//        }
+        System.out.println("Sum after while "+ sum);
 
-        System.out.println(st15);
+        // no need to write while loop to calculate
+        // factorial for a number less than 8
+        // print
 
-        // StringUtils Apache with maven
+        // factorial  5  ===> 5*4*3*2*1
+
+
+        do {
+            System.out.println("Inside do while");
+            i++;
+        }while (i<10);
+
+
+
+
+
+
 
 
     }
