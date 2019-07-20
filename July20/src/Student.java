@@ -41,7 +41,9 @@ public class Student {
 //        }
 
 
-        Manager emp  = new Manager();
+        Employee emp  = new Employee("Atin",20,20);
+        emp.printDetails();
+
 
 
 
