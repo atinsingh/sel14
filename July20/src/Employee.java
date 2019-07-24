@@ -2,11 +2,11 @@ public class Employee extends Person {
 
     private int empId;
     private double hourlyRate;
+    private final String empType = "CONTRACTOR";
 
     public Employee(String name, int empId, double hourlyRate) {
 
         super(name);
-
         this.empId = empId;
         this.hourlyRate = hourlyRate;
     }

@@ -21,6 +21,11 @@ public class Student {
     }
 
 
+    public static void printEmployeeDetails(Person person){
+        person.printDetails();
+    }
+
+
     public static void main(String[] args) {
 
 //        Student [] students = new Student[4]; // only giving you memory
@@ -42,12 +47,22 @@ public class Student {
 
 
         Employee emp  = new Employee("Atin",20,20);
-        emp.printDetails();
+       // emp.printDetails();
 
         emp.likeMe();
 
-        emp.printDetails();
+       // emp.printDetails();
         emp.likeMe(120);
+
+
+
+        Person person =  new Employee("Vivek",1,20);
+
+        Person person1 = new Person("Atin");
+
+        Person p = new Manager("ABC",5,40);
+
+        printEmployeeDetails(p);
 
 
     }

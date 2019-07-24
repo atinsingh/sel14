@@ -1,7 +1,10 @@
+import java.io.InputStream;
+
 public class Person {
 
     private String name;
     private int likes;
+    private Address address;
 
 //    public Person(){
 //
@@ -16,6 +19,12 @@ public class Person {
         this.likes = likes;
     }
 
+    public Person(String name, int likes, Address address) {
+        this.name = name;
+        this.likes = likes;
+        this.address = address;
+    }
+
     public String getName() {
         return name;
     }
@@ -28,4 +37,6 @@ public class Person {
     public void likeMe(){
         likes++;  // likes = likes+1;
     }
+
+
 }
