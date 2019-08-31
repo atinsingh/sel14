@@ -1,3 +1,4 @@
+import javax.lang.model.element.NestingKind;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,21 +10,24 @@ import java.util.function.Predicate;
 public class Main {
 
     public static void main(String[] args) {
-      List<Car> carList = new ArrayList<>();
+        // Map
+        // where you association
+        // List you can use value // Atin
+        // 1 ==> Atin  // "A" ==> "Atin"
+                         //'V' ==> "Vivek"
+        // 2==> Vivek
+        //  "Atin" ==> new Person
 
+       Map<String, String> nameMap = new Hashtable<>();
+       nameMap.put("atin", "Python");
+       nameMap.put("vivek", "Java");
+       nameMap.put("vivek", "C++");
+       System.out.println(nameMap.get("atin"));
 
+       Map<String, Person> map = new HashMap<>();
+       map.put("TC1", new Person("Atin", 39));
+       map.put("TC2", new Person("Rahul", 40));
 
-      carList.add( new Car("Audi"));
-      //
-
-      carList.add( new Car("Audi"));
-
-
-      System.out.println(carList);
-      Set<Car> carSet = new HashSet<>();
-
-      carSet.addAll(carList);
-
-      System.out.println(carSet);
+        System.out.println(map.get("TC1").getName());
     }
 }

@@ -19,6 +19,10 @@ public class Car {
         System.out.println("Stop");
     }
 
+    public String getCarName() {
+        return carName;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
