@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ClassDemoTestSuite" verbose="1" >
+    <test name="Sanity" >
+       <groups>
+           <run> <include name="smoke"/></run>
+       </groups>
+        <classes>
+            <class name="ZoomTest"></class>
+            <class name="ZoomInfoTest"></class>
+        </classes>
+    </test>
+
+    <test name="UAT">
+        <classes>
+            <class name="ZoomTest"/>
+            <class name="ZoomInfoTest"/>
+            <class name="CalculatorTest"></class>
+        </classes>
+    </test>
+</suite>
